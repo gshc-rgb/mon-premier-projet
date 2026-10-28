@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">UE2: bootstrap</a>
+            <button class="navbar-brand-toggler navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="devinettes.html">devinettes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../exercice-01/validateur.html">Mot de passe</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../exercice-03/simulateur-bancaire.html">simu bancaire</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="zone-configuration">
+        <div class="mb-3">
+            <label for="min-range">plage minimale :</label>
+            <input type="number" id="min" value="1">
+        </div>
+        <div class="mb-3">
+            <label for="max-range">plage maximale :</label>
+            <input type="number" id="max" value="100">
+        </div>
+        <div class="mb-3">
+            <label for="nb-essais">Nombre d'essais autorisés :</label>
+            <input type="number" id="nbEssais" value="10">
+        </div>
+        <button onclick="initialiserPartie()">Valider la configuration</button>
+    </div>
+    <div id="zone-jeu">
+        <div class="mb-3">
+            <label id="consigne" for="proposition"> proposition </label>
+            <input type="number" id="proposition">
+        </div>
+        <button class="btn btn-primary" id="btn-envoyer" onclick="verifierProposition()">Valider l'envoi</button>
+    </div>
+
+    <div id="message" class="alert alert"></div>
+    <script src="devinettes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
